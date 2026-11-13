@@ -1,0 +1,494 @@
+
+/* ===== GENERAL STYLING ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0A192F;
+    color: #E6E6E6;
+    line-height: 1.6;
+}
+
+/* ===== NAVIGATION BAR ===== */
+
+header {
+    background-color: #112240;
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #64FFDA;
+    font-size: 28px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #E6E6E6;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #64FFDA;
+}
+
+/* ===== HOME SECTION ===== */
+
+.home {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 60px 10%;
+}
+
+.home-content {
+    max-width: 750px;
+}
+
+.home-content p:first-child {
+    color: #64FFDA;
+    font-size: 20px;
+}
+
+.home-content h1 {
+    font-size: 48px;
+    color: #FFFFFF;
+    margin: 10px 0;
+}
+
+.home-content h2 {
+    font-size: 30px;
+    color: #1E90FF;
+    margin-bottom: 20px;
+}
+
+.home-content p {
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+/* ===== BUTTON ===== */
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border: 2px solid #64FFDA;
+    border-radius: 5px;
+    color: #64FFDA;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #64FFDA;
+    color: #0A192F;
+}
+
+/* ===== COMMON SECTION STYLING ===== */
+
+section:not(.home) {
+    padding: 80px 10%;
+}
+
+section:not(.home) h2 {
+    color: #64FFDA;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+/* ===== ABOUT SECTION ===== */
+
+#about p {
+    font-size: 17px;
+    max-width: 850px;
+}
+
+/* ===== SKILLS SECTION ===== */
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skills-list span {
+    background-color: #112240;
+    padding: 15px 25px;
+    border-radius: 5px;
+    border: 1px solid #1E90FF;
+    color: #64FFDA;
+    transition: 0.3s;
+}
+
+.skills-list span:hover {
+    transform: translateY(-5px);
+    background-color: #1E90FF;
+    color: white;
+}
+
+/* ===== PROJECT SECTION ===== */
+
+.project-card {
+    background-color: #112240;
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 4px solid #64FFDA;
+    max-width: 600px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    margin-bottom: 10px;
+}
+
+/* ===== CONTACT SECTION ===== */
+
+#contact p {
+    margin-bottom: 12px;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+    text-align: center;
+    background-color: #112240;
+    padding: 25px;
+    color: #64FFDA;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 15px 5%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .home {
+        padding: 60px 7%;
+    }
+
+    .home-content h1 {
+        font-size: 34px;
+    }
+
+    .home-content h2 {
+        font-size: 24px;
+    }
+
+    section:not(.home) {
+        padding: 60px 7%;
+    }
+
+}
+
+/* ===== PROJECTS GRID ===== */
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.project-card {
+    background-color: #112240;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #233554;
+    border-top: 4px solid #64FFDA;
+    transition: 0.3s ease;
+    max-width: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: #64FFDA;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.project-card h3 {
+    color: #64FFDA;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    color: #CCD6F6;
+    margin-bottom: 15px;
+}
+
+.project-card h4 {
+    color: #FFFFFF;
+    margin-bottom: 8px;
+}
+
+.project-tag {
+    display: inline-block;
+    background-color: #1E90FF;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 768px) {
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* ==================================
+   PREMIUM PORTFOLIO BACKGROUND
+================================== */
+
+body {
+    background:
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(30, 144, 255, 0.20),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 10% 55%,
+            rgba(100, 255, 218, 0.10),
+            transparent 28%
+        ),
+        linear-gradient(
+            135deg,
+            #071426,
+            #0A192F,
+            #101F3D
+        );
+
+    background-attachment: fixed;
+    color: #E6E6E6;
+}
+
+
+/* ==================================
+   HERO SECTION
+================================== */
+
+.home {
+    min-height: 90vh;
+    padding: 70px 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.home-content {
+    max-width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.welcome-text {
+    color: #64FFDA;
+    font-size: 14px;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+
+.home-content h1 {
+    color: #FFFFFF;
+    font-size: clamp(36px, 5vw, 58px);
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.home-content h1 span {
+    color: #64FFDA;
+    text-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
+}
+
+.home-content h2 {
+    color: #1E90FF;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.description {
+    color: #CCD6F6;
+    font-size: 17px;
+    max-width: 600px;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+
+/* ==================================
+   HERO BUTTONS
+================================== */
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.hero-buttons .btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.hero-buttons .btn-primary {
+    background: #1E90FF;
+    border-color: #1E90FF;
+}
+
+.hero-buttons .btn-primary:hover {
+    background: #64FFDA;
+    color: #0A192F;
+    border-color: #64FFDA;
+    transform: translateY(-4px);
+}
+
+.hero-buttons .btn-outline-info {
+    color: #64FFDA;
+    border-color: #64FFDA;
+}
+
+.hero-buttons .btn-outline-info:hover {
+    background: #64FFDA;
+    color: #0A192F;
+    transform: translateY(-4px);
+}
+
+
+/* ==================================
+   PROFILE PHOTO
+================================== */
+
+.profile-area {
+    position: relative;
+    z-index: 2;
+}
+
+.profile-glow {
+    width: 310px;
+    height: 310px;
+    margin: auto;
+    padding: 9px;
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #64FFDA,
+        #1E90FF,
+        #64FFDA
+    );
+
+    box-shadow:
+        0 0 25px rgba(30, 144, 255, 0.5),
+        0 0 65px rgba(100, 255, 218, 0.25);
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50%;
+    border: 5px solid #0A192F;
+    display: block;
+}
+
+
+/* ==================================
+   SECTION HIGHLIGHT
+================================== */
+
+#about,
+#skills,
+#projects,
+#contact {
+    position: relative;
+    background: rgba(17, 34, 64, 0.45);
+    border-top: 1px solid rgba(100, 255, 218, 0.08);
+}
+
+.project-card,
+.skills-list span {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ==================================
+   RESPONSIVE DESIGN
+================================== */
+
+@media (max-width: 768px) {
+
+    .home {
+        text-align: center;
+        padding: 60px 0;
+    }
+
+    .home-content {
+        margin-bottom: 50px;
+    }
+
+    .description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .profile-glow {
+        width: 230px;
+        height: 230px;
+    }
+
+}
